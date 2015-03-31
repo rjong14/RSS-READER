@@ -25,7 +25,7 @@
                 <p class="event received">Device is Ready</p>
             </div>
 -->
-<html ng-app="rssReader">
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -67,6 +67,12 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript">
+
+        document.addEventListener('deviceready', function onDeviceReady() {
+            angular.bootstrap(document, ['rssReader']);
+        }, false);
+
+        var rssReader = angular.module('rssReader', []);
         app.initialize();
     </script>
 </body>
