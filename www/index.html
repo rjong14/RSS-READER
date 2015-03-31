@@ -32,26 +32,26 @@
 </head>
 
 <body>
-        <div data-role="page">
-            <div class="nav-panel" data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push">
-                <div data-role="nav">
-                    <ul class="jqm-list ui-listview">
-                        <li class="ui-btn ui-li ui-btn-up-d"><a href="#/">Home</a>
+    <div data-role="page">
+        <div class="nav-panel" data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push">
+            <div data-role="nav">
+                <ul class="jqm-list ui-listview">
+                    <li class="ui-btn ui-li ui-btn-up-d"><a href="#/">Home</a>
                         <li class="ui-btn ui-li ui-btn-up-d"><a href="#/view">new</a>
 
                         </li>
-                    </ul>
-                </div>
-            </div>
-            <div data-role="header">
-                <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
-                <h1>Home</h1>
-
-            </div>
-            <div data-role="content">
-                <div ng-view></div>
+                </ul>
             </div>
         </div>
+        <div data-role="header">
+            <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+            <h1>Home</h1>
+
+        </div>
+        <div data-role="content" role="main">
+            <div ng-view></div>
+        </div>
+    </div>
 
     <!-- Libs -->
     <script type="text/javascript" src="lib/angular-1.2.0-rc3.js"></script>
