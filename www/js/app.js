@@ -1,22 +1,19 @@
-(function () {
-    var app = angular.module('rssReader', [])
-
-    .config(['$httpProvider', function ($httpProvider) {
+angular.module('App', ['ngRoute', 'App.services', 'App.controllers'])
+    // .config(['$compileProvider', function ($compileProvider) {
+    //     $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+    // }])
+    .config(function ($httpProvider, $routeProvider) {
             $httpProvider.defaults.useXDomain = true;
             $httpProvider.defaults.headers.common = 'Content-Type: application/json';
             delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    }
-])
-
-
-        app.controller('motdController', function ($scope, $http) {
-        $http.get("https://rssapi.herokuapp.com/").success(function (response) {
-            $scope.data = response
+        $routeProvider
+        .when('/', {
+            controller: 'MainCtrl',
+            templateUrl: 'partials/main.html'
         })
+        .when('/view', {
+            controller: 'ViewCtrl',
+            templateUrl: 'partials/view.html'
+        })
+        .otherwise({redirectTo: '/'});
     });
-
-
-
-
-
-})();
