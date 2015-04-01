@@ -9,12 +9,12 @@ angular.module('App', ['ngRoute', 'App.services', 'App.controllers'])
             delete $httpProvider.defaults.headers.common['X-Requested-With'];
         $routeProvider
         .when('/', {
-            controller: 'MainCtrl',
-            templateUrl: 'partials/main.html'
+            controller: 'MainCtrl'
+            //templateUrl: 'partials/main.html'
         })
         .when('/view', {
-            controller: 'ViewCtrl',
-            templateUrl: 'partials/view.html'
+            controller: 'ViewCtrl'
+            //templateUrl: 'partials/view.html'
         })
         .otherwise({redirectTo: '/'});
     });
