@@ -1,4 +1,4 @@
-angular.module('App', ['ngMaterial', 'ngRoute', 'App.services', 'App.controllers'])
+angular.module('App', ['ngMaterial', 'ngRoute', 'App.services', 'App.controllers' ])
     // .config(['$compileProvider', function ($compileProvider) {
     //     $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
     // }])
