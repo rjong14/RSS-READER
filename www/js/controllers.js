@@ -12,6 +12,6 @@ angular.module('App.controllers', [])
         $scope.lol = "topkek";
       $scope.toggleSidenav = function(menuId) {
           console.log("toggleshit")
-    $mdSidenav(menuId).toggle();
+    $mdSidenav(menuId).open();
        };
     }]);
