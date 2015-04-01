@@ -7,4 +7,11 @@ angular.module('App.controllers', [])
     }])
     .controller('ViewCtrl', ['$scope', function ($scope) {
         $scope.status = "Also totally works!";
+    }])
+    .controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
+        $scope.lol = "topkek";
+      $scope.toggleSidenav = function(menuId) {
+          console.log("toggleshit")
+    $mdSidenav(menuId).toggle();
+       };
     }]);
