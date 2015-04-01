@@ -2,8 +2,7 @@ angular.module('App', ['ngRoute', 'App.services', 'App.controllers'])
     // .config(['$compileProvider', function ($compileProvider) {
     //     $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
     // }])
-    .config(function ($httpProvider, $routeProvider, $locationProvider) {
-            $locationProvider.html5Mode(true)
+    .config(function ($httpProvider, $routeProvider) {
             $httpProvider.defaults.useXDomain = true;
             $httpProvider.defaults.headers.common = 'Content-Type: application/json';
             delete $httpProvider.defaults.headers.common['X-Requested-With'];
