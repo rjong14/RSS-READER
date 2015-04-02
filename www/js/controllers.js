@@ -13,7 +13,10 @@ angular.module('App.controllers', [])
          $scope.status = "It works!";
         $http.get("https://rssapi.herokuapp.com/").success(function (response) {
             $scope.data = response
-        });
+        }).error(function(response, status, headers, config) {
+      console.log('die http werk nie')
+      $scope.data = "werk nie";
+    });;
       $scope.toggleSidenav = function(menuId) {
           console.log("toggleshit")
     $mdSidenav(menuId).open();
